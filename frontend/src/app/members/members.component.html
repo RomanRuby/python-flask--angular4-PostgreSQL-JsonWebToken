@@ -1,0 +1,34 @@
+<section class="hero" id="hero">
+  <div class="hero-head"></div>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="is-1 title">
+        Members area
+      </h1>
+
+      <p>login:
+        <b>{{accountData?.login}}</b>
+      </p>
+      <p>password:
+        <b>{{accountData?.password}}</b>
+      </p>
+      <p>Cars:</p>
+      <div class="card card-block"
+           *ngFor="let car of cars">
+        <h4 class="card-title" > "ID:" {{car.id}}</h4>
+        <p class="card-text">"Name:"{{car.name}}</p>
+        <p class="card-text">"Weight:"{{car.weight}}</p>
+      </div>
+
+
+      <p>Holders:</p>
+      <div class="card card-block"
+           *ngFor="let holder of holders">
+        <h4 class="card-title">"ID"{{holder.id}}</h4>
+        <p class="card-text">"Name"{{holder.name}}</p>
+        <p class="card-text">"Key:"{{holder.key}}</p>
+        <p class="card-text">"carID:"{{holder.carId}}</p>
+      </div>
+    </div>
+  </div>
+</section>
