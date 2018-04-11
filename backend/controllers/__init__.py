@@ -7,9 +7,11 @@ from backend.controllers.HolderController import HolderController
 from backend.controllers.LoginController import Login
 from backend.controllers.MainController import MainController
 from backend.models.Entity import engine, Base
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 api = Api(app)
 app.config['SECRET_KEY'] = 'super-secret'
 jwt = JWT(app, authenticate, identity)
